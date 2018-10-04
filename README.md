@@ -5,7 +5,7 @@ McKinsey Analytics organized multiple online hackathons on **analyticsvidhya** d
 
 
 ## Problem Statement
-***
+
 Your client is an Insurance company and they want to know how likely is paying the renewal premium for each of their clients and, consequently, how to build an incentive plan for their agents depending on the client they'll work with, e.g : if an agent is going to work with a client that will most probably pay the renewal premium, then maybe we shoudln't invest much in that one.      
 All in all, the company wants to maximize the net revenue : sum(renewal - incentives given to collect the renewal).
  
@@ -28,7 +28,7 @@ Given the information, the client wants you to predict the propensity of renewal
 Online hackaton participation 
 
 ## Evaluation Criteria
-***
+
 Solutions were evaluated on 2 criterias:
 * A. Predicted probabilities of receiving a premium on a policy without considering any incentive.
 * B. Monthly incentives given to agents (for each policy) to maximize the net revenue.
@@ -45,17 +45,17 @@ where
 * `p` - is the renewal probability predicted using a benchmark model by the insurance company (which is also the value that you're trying to approximate from Part A)
 * `dp` - (% Improvement in renewal probability*`p`) is the improvement in renewal probability calculated from the agent efforts in hours.
 * `Premium on policy` is the premium paid by the policy holder for the policy in consideration.
-* `Incentive on policy` is the incentive given to the agent for increasing the chance of renewal (estimated by the participant) for each policy.
+* `Incentive on policy` is the incentive given to the agent for increasing the chance of renewal for each policy.
 
+So as you said before, it's not only a classification problem, there's also an optimization component to find the best compromise between incentive and revenue.
 
-
-Overall Ranking at the leaderboard would be done using the following equation:
+Overall Ranking was based on :
  
 `Combined Score = 0.7*AUC-ROC value + 0.3*(net revenue collected from all policies)*lambda`
  
 where `lambda` is a normalizing factor.
 
-# Data
+## Data
 
 | Variable 	| Definition |
 | :-----------:	| :--------: |
